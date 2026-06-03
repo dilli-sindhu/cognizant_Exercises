@@ -1,0 +1,80 @@
+    <!--
+    . Event Registration Form 
+    Scenario: Residents need to register for events. 
+    Objective: Practice input types, validation, placeholder, autofocus, and output 
+    Task: 
+    • Include fields: name (text), email (email), date (date), event type (select), message 
+    (textarea) 
+    • Add placeholder, required, and autofocus 
+    • Display a confirmation message using <output> when the form is submitted 
+    • Style the form using CSS 
+    -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, intial-scale=1.0">
+            <title>Event Registration Form</title>
+            <style>
+                body{
+                    display: flex;
+                    justify-content: center;
+                align-items: center;
+                height:100vh;
+                background-color: blueviolet;
+                }
+                form{
+                    border: 2px solid black;
+                    padding: 40px;
+                    font-size:30px;
+                    background-color: aliceblue;
+                }
+               
+            </style>
+
+        </head>
+        <body>
+            <form onsubmit="showMessage(event)">
+                <h3>Event Registration Form</h3>
+                
+                <label for="name"> Name:</label><br>
+                <input type="text" style="width:250px;" name="name" id="name" required placeholder="Enter name" autofocus>
+            
+                <br>
+                <br>
+                <label for="email">Email:</label><br>
+                <input type="email"  style="width:250px;" name="email" id="email" required placeholder="Enter email">
+                <br>
+                <br>
+                <label for="date">Date:</label><br>
+                <input type="date" style="width:250px;"  name="date" id="date" required >
+                <br>
+                <br>
+                <label for="eventtype">Event type:</label><br>
+                <select id="eventtype" name="eventtype">
+                    <option>Holi</option>
+                    <option>Diwali</option>
+                    <option>Sankranthi</option>
+                    <option >Dusshera</option>
+                </select>
+                <br>
+                <br>
+                <label for="Description">Description</label><br>
+            <textarea rows="5" cols="50"  placeholder="any other specifications regarding events" id="Description"></textarea>
+                <br>
+                <br>
+                <input type="submit" value="submit">
+                <br>
+                 <br>
+                 <output id="res"></output>
+            </form>
+            <script>
+                function showMessage(event)
+                {
+                    event.preventDefault();
+                    document.getElementById("res").innerHTML="Registration Successfull";
+                }
+            </script>
+        </body>
+    </html>

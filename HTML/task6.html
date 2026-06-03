@@ -1,0 +1,106 @@
+<!--
+6. Event Feedback with Events Handling 
+Scenario: Collect real-time feedback and interactions from the user. 
+Objective: Handle blur, change, click, double-click, and keyboard events. 
+Task: 
+• Use onblur to validate a phone number field 
+• Use onchange on a dropdown to display the selected event fee 
+• onclick on a submit button to show a confirmation 
+• ondblclick on an image to enlarge it 
+• Capture key events in the feedback textarea and count characters 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Event feedback</title>
+        <style>
+            #im
+            {
+                width: 150px;
+    transition: 0.3s;
+    border: 2px solid black;
+    cursor: pointer;
+            }
+            .big
+            {
+                width: 300px;
+                 border: 5px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Event Feedback Form</h2>
+        <form onsubmit="return false;">
+            <label for="PhoneNumber">PhoneNumber</label>
+            <input type="text" id="phno" onblur="validate()" required>
+            <p id="no">isValid</p>
+            <br>
+            <br>
+            <label for="Event fee">Event Fee</label>
+            <select id="fee" name="eventfee" onchange="displayEventFee()">
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>    
+            </select>
+            <p id="feeMsg">Fees</p>
+             <br>
+             <br>
+             <input type="button" value="submit" id="btn" onclick="confirmation()">
+              <br>
+              <br>
+              <button ondblclick="enlarge()"><img src="dogs.jpg"  id="im" alt="dogs"></button>
+             <br>
+             <br>
+             <label for="keyevent">keyEvents</label>
+             <textarea  id="ta" rows="5" cols="30" onkeyup="countChars()"></textarea>
+            <p id="count">characters:0</p>
+        </form>
+        <script>
+            function validate()
+            {
+                let str1=document.getElementById("phno").value;
+                let str=document.getElementById("no");
+                let pattern=/^[0-9]+$/;
+                if(str1.length==10 && pattern.test(str1))
+                {
+                 str.innerHTML='valid phone Number';
+                 str.style.color="green";
+                }
+                else  
+                 {
+                 str.innerHTML='invalid phone Number';
+                 str.style.color="red";
+                }
+            }
+
+            function confirmation()
+            {
+              alert("Registration Sucessfull");
+            }
+         
+             function displayEventFee()
+             {
+                let val=document.getElementById("fee").value;
+                document.getElementById("feeMsg").innerHTML="Selected fee"+val;
+             }
+
+             function enlarge()
+             {
+                document.getElementById("im").classList.toggle("big");
+             }
+            
+             function countChars()
+             {
+                let va = document.getElementById("ta").value;
+                document.getElementById("count").innerHTML="Character count"+va.length;
+                
+             }
+
+
+
+        </script>
+    </body>
+</html>

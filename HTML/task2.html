@@ -1,0 +1,49 @@
+<!--   
+Navigation and Linking 
+Scenario: Users should navigate between "Home", "Events", and "Contact" sections. 
+Objective: Provide intuitive navigation and section-based references. 
+Task: 
+• Use <nav> with anchor tags <a href="#events">Events</a> 
+• Define matching IDs for each section like <section id="events"> 
+• Add a link to an external help document using <a href="help.html" target="_blank">
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>navigation example</title>
+    </head>
+
+    <body>
+          <!--Navigation-->
+          <nav>
+            <a href="#home">Home</a>
+            <a href="#events">Events</a>
+            <a href="#contacts">Contacts</a>
+            <a href="help.html" target="_blank">Help</a>
+          </nav>
+          <hr>
+
+          <!--Home Section-->
+          <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to the home page</p>
+          </section>
+
+          <!--Events Section-->
+          <section id="Events">
+            <h2>Events</h2>
+            <p>Details about upcoming events</p>
+          </section>
+
+          <!--Contacts Section-->
+          <section id="contacts">
+            <h2>Contacts</h2>
+            <p>Contact us at contact@email.com</p>
+          </section>
+    </body>
+</html>

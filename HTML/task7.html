@@ -1,0 +1,42 @@
+<!--
+Video Invite with Media Events 
+Scenario: Show a short event promo video. 
+Objective: Work with <video> and oncanplay event 
+Task: 
+• Insert a <video> element with source and controls 
+• Use oncanplay to display a message like "Video ready to play" 
+• Use onbeforeunload to warn users if they try to leave the form page unfinished
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width intial-scale=1.0">
+     <title>Video demo</title>
+</head>
+ <body>
+    <video id="vdo" width="400px" controls oncanplay="Ready()">
+        <source src="pki.mp4" type="video/mp4">
+          Your browser does not support video tag
+    </video>
+    <p id="msg"></p>
+    <br>
+    <br>
+    <input type="text" name="name" id="name" placeholder="Enter name">
+    <br>
+    <br>
+    <input type="text" name="PhoneNumber" id="no" placeholder="Enter mobile no">
+    <br>
+    <br>
+ <script>
+    function Ready()
+    {
+        document.getElementById("msg").innerHTML="Video is Ready to play";
+        document.getElementById("msg").style.color="red";
+    }
+    window.onbeforeunload=function(){
+        return "You have unsaved changes. Are you sure you want to leave?";
+    };
+ </script>
+</body>
+</html>

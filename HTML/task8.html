@@ -1,0 +1,100 @@
+<!--
+8. Saving User Preferences 
+Scenario: Store preferred event type for returning users. 
+Objective: Work with localStorage, sessionStorage, and deletion 
+Task: 
+• Save selected event type in localStorage 
+• On reload, retrieve and pre-select it 
+• Add a "Clear Preferences" button that clears both localStorage and sessionStorage 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save User Preferences</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Preferred Event Tyes</h2>
+    <label for="eventtype">---Select event Type </label>
+    <br>
+    <br>
+    <select id="eventtype">
+        <option value="">choose an event type</option>
+        <option value="music">Music</option>
+        <option value="dance">Dance</option>
+        <option value="sports">Sports</option>
+    </select>
+
+   <br><br>
+    <button id="save" >save</button>
+    <br>
+    <button id="clear">clear</button>
+    <br>
+    <div id="msg"></div>
+<script>
+   const eventtype=document.getElementById("eventtype");
+   const save=document.getElementById("save");
+   const clear=document.getElementById("clear");
+   const msg=document.getElementById("msg");
+
+   window.onload=function(){
+     const event=localStorage.getItem("preferredevent");
+     if(event)
+     {
+        eventtype.value=event;
+        msg.innerText="Previously select Event :"+event;
+     }
+   }
+
+   save.addEventListener("click",function(){
+    const event=eventtype.value;
+    if(event==="")
+   {
+    msg.innerText="please select the event type";
+   }
+   else
+   {
+    localStorage.setItem("preferredevent",event);
+    sessionStorage.setItem("currentsessionevent", event);
+    msg.innerText="Selected Event:"+event;
+   }
+   });
+
+   clear.addEventListener("click",function(){
+    localStorage.clear();
+    sessionStorage.clear();
+    msg.innerText="Both local and session storages cleared";
+    eventtype.value="";
+   })
+
+    </script>
+
+</body>
+</html>
