@@ -1,0 +1,59 @@
+/* ==========================
+   Global Styles
+   ========================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================
+   Header Styles
+   ========================== */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==========================
+   Section Styles
+   ========================== */
+section {
+    padding: 20px;
+}
+
+/* ==========================
+   Heading Styles
+   ========================== */
+h2 {
+    color: #007BFF;
+}
+
+/* ==========================
+   Paragraph Styles
+   ========================== */
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ==========================
+   Style for Main CTA Button
+   ========================== */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* ==========================
+   CTA Button Hover Effect
+   ========================== */
+.cta-button:hover {
+    background-color: #0056b3;
+}

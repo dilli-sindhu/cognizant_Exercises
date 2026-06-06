@@ -1,0 +1,28 @@
+/* ==========================
+   Page Styles
+   ========================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* ==========================
+   Heading Styles
+   ========================== */
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+/* ==========================
+   Multi-Column Layout
+   ========================== */
+.news-article {
+    column-count: 2;
+
+    column-gap: 100px;
+
+    column-rule: 1px solid gray;
+
+    text-align: justify;
+}

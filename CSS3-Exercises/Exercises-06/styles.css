@@ -1,0 +1,51 @@
+/* ==========================
+   Navigation Menu Styles
+   ========================== */
+.nav-menu {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* ==========================
+   Link Pseudo Classes
+   ========================== */
+
+/* Unvisited Link */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Visited Link */
+a:visited {
+    color: purple;
+}
+
+/* Mouse Hover */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* While Clicking */
+a:active {
+    color: green;
+}
+
+/* ==========================
+   Event List Styles
+   ========================== */
+.event-list {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.event-list li {
+    padding: 8px;
+    margin: 5px 0;
+}

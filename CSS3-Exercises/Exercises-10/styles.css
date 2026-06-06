@@ -1,0 +1,98 @@
+/* ==========================
+   General Styles
+   ========================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ==========================
+   Header
+   ========================== */
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 3vh;
+}
+
+/* ==========================
+   Navigation
+   ========================== */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+}
+
+/* ==========================
+   Flexbox Layout
+   ========================== */
+.events-container {
+    display: flex;
+    gap: 2%;
+    padding: 2%;
+}
+
+.eventCard {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 2%;
+}
+
+.eventCard img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+/* ==========================
+   Media Query
+   For screens <= 768px
+   ========================== */
+@media screen and (max-width: 768px) {
+
+    /* Stack navigation vertically */
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Stack cards vertically */
+    .events-container {
+        flex-direction: column;
+    }
+
+    .eventCard {
+        width: 100%;
+    }
+
+    /* Reduce font sizes */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    /* Smaller images */
+    .eventCard img {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+}

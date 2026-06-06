@@ -1,0 +1,52 @@
+/* ==========================
+   Body Background Styles
+   ========================== */
+body {
+    /* Fallback color */
+    background-color: #e6f2ff;
+
+    /* Background image */
+    background-image: url("city-background.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================
+   Section Header Styless
+   Linear Gradient Background
+   ========================== */
+.section-header {
+    background:linear-gradient( rgb(135, 87, 87), rgb(46, 8, 10));
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ==========================
+   Event Section Styles
+   RGBA Background
+   ========================== */
+.event-section {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ==========================
+   Text Colors Using HEX
+   ========================== */
+h2 {
+    color: #003366;
+}
+
+p {
+    color: #333333;
+}

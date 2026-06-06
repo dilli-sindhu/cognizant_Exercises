@@ -1,0 +1,39 @@
+/* ==========================
+   Body Styles
+   ========================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+}
+
+/* ==========================
+   Main Heading Styles
+   ========================== */
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ==========================
+   Sub Heading Styles
+   ========================== */
+h2 {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 400;
+    color: #007BFF;
+}
+
+/* ==========================
+   Description Styles
+   ========================== */
+.description {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}

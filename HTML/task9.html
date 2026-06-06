@@ -1,0 +1,77 @@
+<!--
+9. Geolocation for Event Mapping 
+Scenario: Locate the nearest event to the user. 
+Objective: Practice geolocation.getCurrentPosition, error handling, and options 
+Task: 
+• Create a button “Find Nearby Events” 
+• On click, use getCurrentPosition to get and display coordinates 
+• Handle permission denial and timeouts 
+• Use high accuracy options 
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geolocation for Event Mapping</title>
+</head>
+<body>
+    <h2>Geolocation Event Mapping</h2>
+    <br>
+    <br>
+    <button onclick="findPosition()">Find Location</button>
+     <br>
+     <p id="status"></p>
+     <br>
+     <p id="output"></p>
+ 
+     <script>
+       function findPosition()
+       { 
+        const va=document.getElementById("status");
+        const output=document.getElementById("output");
+       if(!navigator.geolocation)
+     {
+        va.innerHTML="Your browser does not support geoloaction fetching"
+        return;
+     }
+       va.innerHTML="Getting Location..."
+       const obj={
+        enableHighAccuracy:true,
+        timeout:10000,
+        maximumAge:0
+       };
+       navigator.geolocation.getCurrentPosition(success,error,obj)
+       
+       function success(position)
+       {
+             const lat=position.coords.latitude;
+             const long=position.coords.longitude;
+             const acc=position.coords.accuracy;
+             va.innerHTML="Location Found";
+             output.innerHTML=`
+             Latitude:${lat}<br>
+             Longitude:${long}<br>
+             Accuracy:${acc}`;
+       }
+
+       function error(err)
+       {
+        switch(err.code)
+        {
+            case err.PERMISSION_DENIED:
+                  va.innerText = "Permission denied. Please allow location access.";
+            break;
+             case err.POSITION_UNAVAILABLE:
+            va.innerText = "Location information is unavailable.";
+            break;
+
+          default:
+            va.innerText = "An unknown error occurred.";
+            break;
+        }
+         output.innerHTML = "";
+       }
+    }
+     </script>
+</body>
+</html>

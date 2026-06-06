@@ -1,0 +1,75 @@
+    <!--
+     Debugging with Chrome DevTools 
+    Scenario: A few users report layout issues and script errors. 
+    Objective: Use Chrome DevTools and VS Code features to debug. 
+    Task: 
+    • Use “Inspect Element” to modify styles and experiment live 
+    • Use the Console tab to view logs from your <script> 
+    • Add breakpoints in JS and reload the page to watch variable values
+    -->
+   
+ <!--
+TASK 10: Debugging with Chrome DevTools
+
+Features practiced:
+1. Inspect Element (HTML/CSS live editing)
+2. Console logs for debugging JS
+3. Breakpoints using Sources tab
+
+Author: Your Name
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debugging with Chrome DevTools</title>
+
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 20px;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Chrome DevTools Debugging Demo</h2>
+
+  <div class="box" id="box">Click Me</div>
+
+  <button onclick="changeColor()">Change Color</button>
+
+  <p id="msg"></p>
+
+  <script>
+    console.log("Page Loaded Successfully");
+
+    function changeColor() {
+      console.log("Button clicked");
+
+      let box = document.getElementById("box");
+
+      let colors = ["red", "green", "yellow", "orange"];
+
+      let randomIndex = Math.floor(Math.random() * colors.length);
+
+      console.log("Selected color:", colors[randomIndex]);
+
+      box.style.backgroundColor = colors[randomIndex];
+
+      document.getElementById("msg").innerText =
+        "Color changed to " + colors[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
