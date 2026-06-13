@@ -1,0 +1,19 @@
+/*
+38. Decompile a Class File 
+• Objective: Reverse engineer compiled Java bytecode. 
+• Task: Use a tool like JD-GUI or CFR to decompile a .class file. 
+• Instructions: 
+o Write a simple Java program and compile it. 
+o Open the .class file in a decompiler. 
+o Analyze the decompiled source. 
+
+Decompile Using CFR
+java -jar cfr.jar Hello.class
+
+*/
+
+public class Hello ]{
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+}

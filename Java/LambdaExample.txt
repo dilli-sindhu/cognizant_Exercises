@@ -1,0 +1,28 @@
+/*
+28. Stream API 
+• Objective: Process collections using streams. 
+• Task: Filter and display even numbers from a list. 
+• Instructions: 
+o Create a List of integers. 
+o Use the Stream API to filter even numbers. 
+o Collect and display the result. 
+*/
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class LambdaExample {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+
+        names.add("Ravi");
+        names.add("Anil");
+        names.add("Priya");
+        names.add("Kiran");
+
+        Collections.sort(names, (a, b) -> a.compareTo(b));
+
+        System.out.println("Sorted List:");
+        names.forEach(System.out::println);
+    }
+}
