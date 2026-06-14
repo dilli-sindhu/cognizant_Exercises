@@ -6,6 +6,8 @@
 o Create a class with a method. 
 o Compile it and run javap -c ClassName. 
 o Interpret the bytecode output. 
+*/
+/*
 
 Inspect Bytecode
 javap -c Demo
