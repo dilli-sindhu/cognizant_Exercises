@@ -6,6 +6,7 @@
 o Create a List of integers. 
 o Use the Stream API to filter even numbers. 
 o Collect and display the result.
+
 */
 
 import java.util.Arrays;
